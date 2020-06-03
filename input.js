@@ -41,9 +41,9 @@ const handleUserInput = function(key) {
     }, 100)
     };
 
-
-
-
+  if (key === 'r') {
+    connection.write('Say: SKRRRRT'); 
+    }
 
   };
 
