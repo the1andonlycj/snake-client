@@ -3,9 +3,9 @@ const net = require('net');
 const connect = function() {
   const conn = net.createConnection({
     host: '135.23.222.148',
-    port: 50541
+    port: 50541,
   });
-  
+
   conn.setEncoding('utf8');
   
   conn.on('data', (data) => {
@@ -14,6 +14,7 @@ const connect = function() {
   
   conn.on('connect', () => {
     conn.write('Name: CJH');
+ 
     console.log("Successfully connected to the server.");
   });
 
@@ -21,3 +22,4 @@ const connect = function() {
 }
 
 module.exports = { connect };
+
